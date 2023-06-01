@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jinja-conditional station</title>
+</head>
+<body>
+    <center>
+    <!--
+        <h1> if condition by using jinja tags</h1>
+            {% if a > 20  %} # a=30
+                <h1> a is greater than 20</h1>
+                <h1>condition is satisfied</h1>
+            {% endif %}    
+
+    <h1>Creating if-else condition statements</h1>
+        {% if a > b %}
+            <h1>if {{a}} is greater then {{b}} </h1>
+            <h1> if condition is success</h1>
+        {% else %}
+            <h1>if condition is not satisfy</h1>
+            <h1>{{a}} is not greater then {{b}}
+
+            </h1>
+        {% endif %}   
+    
+
+<h1>if-elif statement inside jinja</h1>
+    {%  if  a  >  b  and  a  >  c %}
+        <h1>a is greaterthen b</h1>
+        <h1>{{a}}</h1>
+    {% elif b > c %}
+        <h1>if block is not working</h1>
+        <h1>elif block is working </h1>
+        <h1>{{b}}</h1>
+    {% else %}
+        <h1>else is done.</h1>
+        <h1>c is max of a&b</h1>
+        <h1>{{c}}</h1>
+    {% endif %}
+        -->
+
+    <h1>Nested condition by using jinja tags</h1>
+    {% if a > b and a > c %}
+        {% if a > b %}
+            <h1>a is max</h1>
+        {% else %}
+            <h1>b is max</h1>
+        {% endif %}
+    {% else %} 
+        {% if b > c %}
+            <h1>b is max of c</h1>
+        {% else %}
+        <h1>else block else condition is satisfy</h1>
+            <h1>c is max</h1>
+            <h1>{{c}}</h1>
+        {% endif %}
+    {% endif %}
+    </center>
+</body>
+</html>
