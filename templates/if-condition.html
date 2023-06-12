@@ -43,11 +43,11 @@
         -->
 
     <h1>Nested condition by using jinja tags</h1>
-    {% if a > b and a > c %}
-        {% if a > b %}
+    {% if a > b  %}
+        {% if a > c %}
             <h1>a is max</h1>
         {% else %}
-            <h1>b is max</h1>
+            <h1>c is max</h1>
         {% endif %}
     {% else %} 
         {% if b > c %}
